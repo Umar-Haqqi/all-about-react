@@ -12,7 +12,7 @@ function App() {
   const [password, setPassword] = useState("");
 
   // password generator method with useCallback hook
-  const passwordGenerator = useCallback(() => {
+  const passwordGenerator = useCallback(() => { 
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -22,14 +22,19 @@ function App() {
     }
     if (numberAllowed) str += "0123456789";
 
-    for (let i = 1; i <= array.length; i++) {
+    for (let i = 1; i <= lenght; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
-      console.log(char);
+      // console.log(char);
       pass = str.charAt(char);
     }
 
     setPassword(pass);
   }, [lenght, numberAllowed, charAllowed, setPassword]);
+
+  // passwordGenerator(); will not work bacause of useCallback, react take care of rendering
+  // first method to call this function with onClick a button
+
+  // --- useEffect Hook
 
   return (
     <>
