@@ -22,7 +22,7 @@ function InputBox({
         {/* *** label here */}
         <label
           htmlFor={amountInputId}   // binding with useId hook
-          className="text-black/40 mb-2 inline-block">
+          className="text-black/60 mb-2 inline-block">
           {label}
         </label>
 
@@ -47,7 +47,7 @@ function InputBox({
       </div>
 
       <div className="w-1/2 flex flex-wrap justify-end text-right">
-        <p className="text-black/40 mb-2 w-full">Currency Type</p>
+        <p className="text-black/60 mb-2 w-full">Currency Type</p>
 
         {/* *** select currency option here */}
         <select
@@ -59,13 +59,13 @@ function InputBox({
         >
 
           {/* *** loop through array for currency options */}
-          {currencyOptions.map((currency) => {
+          {currencyOptions.map((currency) => (
             // with map same value will repeat which effect performance in react
             // solution: whenever loop in JSX always pass a key for better performance
             <option key={currency} value={currency}>
               {currency}
             </option>
-          })}
+          ))}
         </select>
       </div>
     </div>

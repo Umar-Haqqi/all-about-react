@@ -8,11 +8,11 @@ function useCurrencyInfo(currency) {
             // with fetch u can use .then chaining as much as u want 
             .then((res) => res.json()) // to convert data from string into json
             .then((res) => setData(res[currency])) // it will access what is available in url
-            console.log(data);
+            // console.log(data);
 
     }, [currency])  // whenever there is a change in currency update it
 
-    console.log(data);
+    // console.log(data);
     return data
 }
 
