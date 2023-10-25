@@ -1,6 +1,10 @@
 import React from 'react'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+// import Header from './components/Header/Header'
+// import Footer from './components/Footer/Footer'
+
+// All component are in index file which called by default, no need to write index.js
+import { Header, Footer } from './components'
+
 import { Outlet } from 'react-router-dom'
 
 function Layout() {
