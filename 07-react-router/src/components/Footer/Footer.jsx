@@ -73,7 +73,7 @@ export default function Footer() {
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2023
                         <a href="https://hiteshchoudhary.com/" className="ml-1 hover:underline">
-                            umarhaqqui
+                            Umar Haqqui
                         </a>
                         . All Rights Reserved.
                     </span>
