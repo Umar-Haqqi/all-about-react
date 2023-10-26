@@ -9,6 +9,8 @@ import Layout from './layout.jsx'
 import { Home } from './components'
 import { About } from './components'
 import { Contact } from './components'
+import User from './components/User/User'
+import { Github } from './components'
 
 
 // router
@@ -47,6 +49,14 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
+
+      {/* parameter from url */}
+      <Route path='user/:userid' element={<User />} />
+      {/* how to url parameter access */}
+      {/* because of parameter after : now u have automatic direct access to the file in element(here is User component) */}
+
+      <Route path='/github' element={<Github />} />
+
     </Route>
   )
 )
