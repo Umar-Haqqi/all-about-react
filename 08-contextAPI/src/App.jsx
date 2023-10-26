@@ -1,11 +1,18 @@
 import './App.css'
+import Login from './components/Login'
+import Profile from './components/Profile'
+import UserContextProvider from './context/UserContextProvider'
 
 function App() {
 
   return (
-    <>
-      <h1>hello</h1>
-    </>
+    <UserContextProvider>
+
+      {/* now have directly for any component that will be here */}
+      <Login />
+      <Profile />
+
+    </UserContextProvider>
   )
 }
 
