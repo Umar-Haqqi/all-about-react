@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 function User() {
     // get dynamic data (here is id from url)
     const {userid} = useParams() // now can access the id in url 
+    // it should be extracted same (here is userid) 
 
     return (
         < >

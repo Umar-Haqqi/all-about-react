@@ -1,3 +1,5 @@
+<!-- watch project summary 59:00 -->
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

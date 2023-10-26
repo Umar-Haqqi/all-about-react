@@ -12,6 +12,8 @@ import { Contact } from './components'
 import User from './components/User/User'
 import { Github } from './components'
 
+import { githubInfoLoader } from './components/Github/Github'
+
 
 // router
 // const router = createBrowserRouter([
@@ -44,6 +46,8 @@ import { Github } from './components'
 // another approach for router
 const router = createBrowserRouter(
   createRoutesFromElements(
+
+    // first is layout which means all other given component will be nested between fixed component(between header and footer acc to Outlet)
     <Route path='/' element={<Layout />}>
       {/* Route can also be a self closing */}
       <Route path='' element={<Home />} />
@@ -55,7 +59,14 @@ const router = createBrowserRouter(
       {/* how to url parameter access */}
       {/* because of parameter after : now u have automatic direct access to the file in element(here is User component) */}
 
-      <Route path='/github' element={<Github />} />
+      <Route
+        path='/github'
+        element={<Github />}
+
+      // can fetch APIs directly in loader (for optimization)
+      // on webpage when you hover the link it will trigger the event without click and start fetching API even before useEffect then also keep it in cashe (BTS)
+      loader={githubInfoLoader}
+      />
 
     </Route>
   )
