@@ -28,7 +28,7 @@ function Github() {
 
     return (
         <>
-            <div className='flex justify-center items-center flex-col gap-5 text-orange-700 font-bold min-h-[500px] text-5xl bg-black/10'>
+            <div className='flex justify-center items-center flex-col gap-5 text-orange-700 font-bold min-h-[450px] text-5xl bg-black/10'>
                 <div className='flex justify-center items-center gap-3'>
                     <img className='rounded-full' src={data.avatar_url} alt="profile" width={120} />
                     <span className='font-normal text-black/80' >
@@ -57,7 +57,7 @@ export default Github
 
 // this function will fetch data with loader
 export const githubInfoLoader = async () => {
-    const response = await fetch('https://api.github.com/users/rohanadnan1')
+    const response = await fetch('https://api.github.com/users/Umar-Haqqi')
 
     // can directly return it here
     return response.json()
